@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://bright-basket.onrender.com",
+  baseURL: "",
 });
 
 // 🔑 Attach JWT automatically (ADMIN calls)

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8081/api/products";
+const BASE_URL = "http://localhost:8081/a";
 
 export const getAllProductsApi = async () => {
   const res = await fetch(BASE_URL);
