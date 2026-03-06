@@ -35,6 +35,7 @@ com\brightbasket\exception\PaymentFailedException.class
 com\brightbasket\controller\AdminController.class
 com\brightbasket\repository\OrderItemRepository.class
 com\brightbasket\controller\UserProfileController.class
+com\brightbasket\config\CorsConfig$1.class
 com\brightbasket\repository\UserRepository.class
 com\brightbasket\service\WishlistService.class
 com\brightbasket\config\SecurityConfig.class
@@ -67,6 +68,7 @@ com\brightbasket\dto\LoginRequestDTO.class
 com\brightbasket\dto\WishlistItemDTO.class
 com\brightbasket\model\Cart.class
 com\brightbasket\model\ShippingAddress.class
+com\brightbasket\config\CorsConfig.class
 com\brightbasket\model\CartItem.class
 com\brightbasket\exception\OrderNotFoundException.class
 com\brightbasket\controller\ProductUserController.class

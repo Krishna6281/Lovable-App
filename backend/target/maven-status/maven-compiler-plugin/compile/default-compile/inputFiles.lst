@@ -14,6 +14,7 @@ C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\exception\Payment
 C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\exception\UserAlreadyExistsException.java
 C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\model\Wishlist.java
 C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\model\Product.java
+C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\config\CorsConfig.java
 C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\dto\ProductResponseDTO.java
 C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\exception\PaymentNotFoundException.java
 C:\Users\hp\Desktop\222\backend\src\main\java\com\brightbasket\repository\AddressRepository.java

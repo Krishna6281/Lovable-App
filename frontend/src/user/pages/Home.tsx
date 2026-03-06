@@ -20,25 +20,31 @@ import {
 const Home: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
 
-  const API_URL = "http://localhost:8081/api/products";
+  const API_URL = "https://lovable-app.onrender.com/api/products";
 
   useEffect(() => {
     loadProducts();
   }, []);
 
   const loadProducts = async () => {
-    try {
-      const res = await axios.get(API_URL);
-      setProducts(res.data);
-    } catch (err) {
-      console.error("Failed to load products", err);
-    }
-  };
+  try {
+    const res = await axios.get(API_URL);
+
+    const data = Array.isArray(res.data)
+      ? res.data
+      : res.data.content || [];
+
+    setProducts(data);
+
+  } catch (err) {
+    console.error("Failed to load products", err);
+  }
+};
 
   const featuredProducts = products.slice(0, 8);
-  const trendingProducts = products
-    .filter(p => p.rating >= 4.5 || p.popular)
-    .slice(0, 4);
+  const trendingProducts = Array.isArray(products)
+  ? products.filter(p => p.rating >= 4.5 || p.popular).slice(0, 4)
+  : [];
 
   return (
     <div className="animate-fade-in">
