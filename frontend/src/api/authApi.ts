@@ -8,7 +8,7 @@ export const registerUser = async (
   email: string,
   password: string
 ) => {
-  const response = await api.post("/auth/signup", {
+  const response = await api.post("/api/auth/signup", {
     name,
     email,
     password,
@@ -23,7 +23,7 @@ export const loginUser = async (
   email: string,
   password: string
 ) => {
-  const response = await api.post("/auth/login", {
+  const response = await api.post("/api/auth/login", {
     email,
     password,
   });
