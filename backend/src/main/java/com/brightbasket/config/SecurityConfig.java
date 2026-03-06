@@ -45,7 +45,6 @@ public class SecurityConfig {
                         .requestMatchers("/api/wishlist/**").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
-                        .anyRequest().authenticated()
 
                         // 🔒 All other endpoints require authentication
                         // You can change this to `.authenticated()` when JWT is implemented
