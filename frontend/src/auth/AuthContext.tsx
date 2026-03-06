@@ -152,7 +152,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const adminLogin = async (email: string): Promise<boolean> => {
     try {
       const res = await fetch(
-        `http://localhost:8081/api/admins/login?email=${email}`,
+        `https://lovable-app.onrender.com/api/admins/login?email=${email}`,
         { method: "POST" }
       );
 

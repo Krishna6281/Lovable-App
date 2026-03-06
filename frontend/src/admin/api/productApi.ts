@@ -1,5 +1,5 @@
-const ADMIN_BASE_URL = "http://localhost:8081/api/admin/products";
-const PUBLIC_BASE_URL = "http://localhost:8081/api/products";
+const ADMIN_BASE_URL = "https://lovable-app.onrender.com/api/admin/products";
+const PUBLIC_BASE_URL = "https://lovable-app.onrender.com/api/products";
 
 // ================= ADMIN =================
 

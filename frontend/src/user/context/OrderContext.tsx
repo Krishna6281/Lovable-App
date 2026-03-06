@@ -42,7 +42,7 @@ export const OrderProvider: React.FC<OrderProviderProps> = ({ children }) => {
   const { user, token } = useAuth();
   const [orders, setOrders] = useState<Order[]>([]);
 
-  const API_URL = "http://localhost:8081/api/orders";
+  const API_URL = "https://lovable-app.onrender.com/api/orders";
 
   /* ================= FETCH ORDERS ================= */
   const fetchOrders = async () => {

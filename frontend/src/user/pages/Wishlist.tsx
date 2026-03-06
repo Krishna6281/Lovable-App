@@ -29,7 +29,7 @@ const Wishlist: React.FC = () => {
   const [wishlist, setWishlist] = useState<WishlistItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = 'http://localhost:8081/api/wishlist';
+  const API_URL = 'https://lovable-app.onrender.com/api/wishlist';
 
   /* ================= FETCH WISHLIST ================= */
   const fetchWishlist = async () => {

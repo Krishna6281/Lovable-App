@@ -64,7 +64,7 @@ const Checkout: React.FC = () => {
     };
 
     await axios.post(
-      'http://localhost:8081/api/orders',
+      'https://lovable-app.onrender.com/api/orders',
       orderPayload,
       {
         headers: token ? { Authorization: `Bearer ${token}` } : {},

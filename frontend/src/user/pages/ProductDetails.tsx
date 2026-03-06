@@ -33,7 +33,7 @@ const ProductDetails: React.FC = () => {
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
   const { toast } = useToast();
 
-  const API_URL = 'http://localhost:8081/api/products';
+  const API_URL = 'https://lovable-app.onrender.com/api/products';
 
   useEffect(() => {
     if (id) loadProduct();

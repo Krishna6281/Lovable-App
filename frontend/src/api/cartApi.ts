@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8081/api/cart"; // backend URL with port 8081
+const API_URL = "https://lovable-app.onrender.com/api/cart"; // backend URL with port 8081
 
 // ✅ Get cart summary
 export const getCartSummary = (userId: number) => {

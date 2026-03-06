@@ -36,7 +36,7 @@ const Orders: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const API_URL = 'http://localhost:8081/api/orders';
+  const API_URL = 'https://lovable-app.onrender.com/api/orders';
 
   /* ================= FETCH ORDERS ================= */
   const fetchOrders = async () => {

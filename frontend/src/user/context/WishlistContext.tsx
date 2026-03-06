@@ -50,7 +50,7 @@ export const WishlistProvider: React.FC<WishlistProviderProps> = ({
 }) => {
   const { user, token } = useAuth();
   const [wishlist, setWishlist] = useState<WishlistItem[]>([]);
-  const API_URL = 'http://localhost:8081/api/wishlist';
+  const API_URL = 'https://lovable-app.onrender.com/api/wishlist';
 
   /* ================= FETCH WISHLIST ================= */
   const fetchWishlist = async () => {

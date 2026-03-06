@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8081/a";
+const BASE_URL = "https://lovable-app.onrender.com/api/products";
 
 export const getAllProductsApi = async () => {
   const res = await fetch(BASE_URL);

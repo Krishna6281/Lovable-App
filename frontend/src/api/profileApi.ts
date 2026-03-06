@@ -1,7 +1,7 @@
 import axios from "axios";
 import { User } from "../types";
 
-const API_URL = "http://localhost:8081/api/profile";
+const API_URL = "https://lovable-app.onrender.com/api/profile";
 
 export const getUserProfile = (userId: string) => {
   return axios.get<User>(`${API_URL}?userId=${userId}`, {

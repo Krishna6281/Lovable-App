@@ -38,7 +38,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const { toast } = useToast();
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-  const API_URL = "http://localhost:8081/api/cart";
+  const API_URL = "https://lovable-app.onrender.com/api/cart";
 
   /* ================= FETCH ================= */
   const fetchCartFromBackend = async () => {

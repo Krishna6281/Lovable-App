@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8081/api/orders"; // backend URL
+const API_URL = "https://lovable-app.onrender.com/api/orders"; // backend URL
 
 // ✅ Get orders of a user
 export const getOrdersByUser = (userId: number, token: string) => {

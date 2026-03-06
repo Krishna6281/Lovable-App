@@ -17,7 +17,7 @@ const AdminOrders: React.FC = () => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "http://localhost:8081/api/orders";
+  const API_URL = "https://lovable-app.onrender.com/api/orders";
 
   const fetchOrders = async () => {
     try {

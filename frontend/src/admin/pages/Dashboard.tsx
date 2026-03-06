@@ -29,7 +29,7 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/admin/dashboard")
+      .get("https://lovable-app.onrender.com/api/admin/dashboard")
       .then((res) => {
         setStats(res.data);
         setLoading(false);

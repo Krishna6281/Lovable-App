@@ -41,7 +41,9 @@ public class SecurityConfig {
                         .requestMatchers("/api/admin/**").permitAll()
                         .requestMatchers("/api/profiles/**").permitAll()
                         .requestMatchers("/ai/**").permitAll()
-
+                        .requestMatchers("/api/products/**").permitAll()
+                        .requestMatchers("/api/wishlist/**").permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
 
                         // 🔒 All other endpoints require authentication
