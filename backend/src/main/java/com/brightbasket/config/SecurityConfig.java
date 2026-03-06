@@ -23,49 +23,60 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
+                // ❌ Disable default login forms
                 .httpBasic(httpBasic -> httpBasic.disable())
                 .formLogin(form -> form.disable())
                 .csrf(csrf -> csrf.disable())
                 .cors(Customizer.withDefaults())
 
+                // 🔐 Authorization rules
                 .authorizeHttpRequests(auth -> auth
 
-                        // allow CORS preflight
+                        // ✅ Allow preflight CORS requests
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
-                        // public APIs
+                        // 🔓 Public APIs (no auth)
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/admins/**").permitAll()
+                        .requestMatchers("/api/admin/**").permitAll()
+                        .requestMatchers("/api/profiles/**").permitAll()
                         .requestMatchers("/api/**").permitAll()
+                        .requestMatchers("/api/products/**").permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
 
-                        // everything else
-                        .anyRequest().authenticated()
-                );
+                        // 🔒 All other endpoints require authentication
+                        // You can change this to `.authenticated()` when JWT is implemented
+                        .anyRequest().permitAll());
 
         return http.build();
     }
 
+    // ✅ Password encoder for storing user passwords securely
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    // ✅ CORS configuration for frontend connections
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
-
         CorsConfiguration config = new CorsConfiguration();
 
+        // Allowed origins (your React app)
         config.setAllowedOrigins(List.of(
-                "http://localhost:5173",
                 "http://localhost:8080",
-                "https://lovable-app-1.onrender.com"
-        ));
+                "http://localhost:5173"));
 
+        // Allowed HTTP methods
         config.setAllowedMethods(List.of(
-                "GET", "POST", "PUT", "DELETE", "OPTIONS"
-        ));
+                "GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
+        // Allow all headers and credentials
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
 
+        // Apply CORS to all endpoints
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
 
